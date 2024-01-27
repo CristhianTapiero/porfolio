@@ -1,0 +1,11 @@
+---
+interface Props{
+    classes?: string,
+}
+const { classes } = Astro.props
+---
+<section
+    class:list={["flex w-11/12 h-5/6 relative", classes]}
+>
+    <slot/>
+</section>

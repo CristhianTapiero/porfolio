@@ -1,0 +1,167 @@
+---
+import Container from "./Container.astro";
+import Section from "./Section.astro";
+import TypeScript from "./icons/TypeScript.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import HTML from "./icons/HTML.astro";
+import CSS from "./icons/CSS.astro";
+import React from "./icons/React.astro";
+import Next from "./icons/Next.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import MYSQL from "./icons/MYSQL.astro";
+import Java from "./icons/Java.astro";
+import AWS from "./icons/AWS.astro";
+import Git from "./icons/Git.astro";
+import Chakra from "./icons/Chakra.astro";
+import Node from "./icons/Node.astro";
+import Firebase from "./icons/Firebase.astro";
+import Framer from "./icons/Framer.astro";
+import PlanetScale from "./icons/PlanetScale.astro";
+import Prisma from "./icons/Prisma.astro";
+import Svelte from "./icons/Svelte.astro";
+import Vue from "./icons/Vue.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+
+const TAGS = [
+    {
+        lang: "Next.js",
+        icon: Next,
+        class: "bg-brand-white text-black"
+    },
+    {
+        lang: "Tailwind CSS",
+        icon: Tailwind,
+        class: "bg-[#003159] text-brand-white"
+    },
+    {
+        lang: "React",
+        icon: React,
+        class: "bg-[#003159] text-brand-white"
+    },
+    {
+        lang: "JavaScript",
+        icon: JavaScript,
+        class: "bg-brand-yellow/20 text-brand-white"
+    },
+    {
+        lang: "HTML",
+        icon: HTML,
+        class: "bg-orange-500/20 text-brand-white"
+    },
+    {
+        lang: "CSS",
+        icon: CSS,
+        class: "bg-[#003159] text-brand-white"
+    },
+    {
+        lang: "TypeScript",
+        icon: TypeScript,
+        class: "bg-[#003159] text-brand-white"
+    },
+    {
+        lang: "MySQL",
+        icon: MYSQL,
+        class: "bg-brand-white text-black"
+    },
+    {
+        lang: "Java",
+        icon: Java,
+        class: "bg-brand-white text-black"
+    },
+    {
+        lang: "AWS",
+        icon: AWS,
+        class: "bg-amber-400/40 text-brand-white"
+    },
+    {
+        lang: "Git",
+        icon: Git,
+        class: "bg-brand-white text-black"
+    },
+    {
+        lang: "Chakra UI",
+        icon: Chakra,
+        class: "bg-teal-600/70 text-brand-white"
+    },
+    {
+        lang: "Node.js",
+        icon: Node,
+        class: "bg-green-500/20 text-brand-white"
+    },
+    {
+        lang: "Firebase",
+        icon: Firebase,
+        class: "bg-amber-500/40 text-brand-white"
+    },
+    {
+        lang: "Framer Motion",
+        icon: Framer,
+        class: "bg-black text-brand-white"
+    },
+    {
+        lang: "PlanetScale",
+        icon: PlanetScale,
+        class: "bg-black text-brand-white"
+    },
+    {
+        lang: "Prisma",
+        icon: Prisma,
+        class: "bg-black text-brand-white"
+    },
+    {
+        lang: "Svelte",
+        icon: Svelte,
+        class: "bg-orange-600/40 text-brand-white"
+    },
+    {
+        lang: "Vue",
+        icon: Vue,
+        class: "bg-green-600/60 text-brand-white"
+    },{
+        lang: "Astro",
+        icon: AstroIcon,
+        class: "bg-black text-brand-white"
+    }
+]
+const Titles = [
+    {
+        title: "Ingeniería de Sistemas",
+        school: "Universidad Libre de Colombia",
+        date: "2021 - Actualidad"
+    },
+    {
+        title: "AWS Cloud Practitioner Certified",
+        school: "Universidad de los Andes",
+        date: "2021-2022"
+    }
+]
+---
+
+<Container id="estudios">
+    <Section classes="flex-col">
+        <h2 class="text-xl">Estudios</h2>
+        <article class="flex flex-col w-11/12 items-center justify-center gap-2 my-4">
+            {
+                Titles.map((title) =>
+                    (
+                        <div class="w-full bg-brand-gray py-2 px-1 rounded-xl">
+                            <h3 class="text-lg text-brand-white">{title.title}</h3>
+                            <h4 class="text-md text-brand-white">{title.school}</h4>
+                            <h5 class="text-md text-brand-white">{title.date}</h5>
+                        </div>
+                    )
+                )
+            }
+        </article>
+        <h2 class="text-xl">Habilidades Tecnicas</h2>
+        <article class="flex flex-row flex-wrap w-2/4 items-center justify-center gap-2 my-4 self-center max-md:w-10/12">
+            {
+                TAGS.map(tag =>(
+                    <div class={`flex flex-row items-center justify-center gap-2 rounded-xl p-2 ${tag.class}`}>
+                        <tag.icon class="size-7 max-md:size-4"/>
+                        <h3 class="text-lg max-md:text-sm">{tag.lang}</h3>
+                    </div>
+                ))
+            }
+    </Section>
+</Container>

@@ -1,4 +1,7 @@
 ---
+import Header from "../components/Header.astro";
+import BackTop from "../components/BackTop.astro";
+import { ViewTransitions } from 'astro:transitions';
 interface Props {
 	title: string;
 }
@@ -7,45 +10,41 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="title"
+			content="Portafolio de Cristhian David Tapiero Padilla, desarrollador web, diseñador UX/UI"
+		/>
+		<meta
+			name="description"
+			content="Portafolio de Cristhian David Tapiero Padilla, desarrollador web experimentado en el area de Front-End y diseño UI/UX. Especializado en JavaScript y frameworks basados en esta tecnología. "
+		/>
+		<meta
+			name="keywords"
+			content="Front-End developer, Web designer, JavaScript developer, Systems engineer, Web developer, Developer"
+		/>
+		<meta name="robots" content="index, follow" />
+		<meta name="application-name" content="Cristhian Tapiero" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="language" content="Spanish" />
+		<meta name="author" content="Cristhian David Tapiero Padilla" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik&family=Titillium+Web&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="shortcut icon" href="./martini.webp" type="image/x-icon" />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
-	<body>
-		<slot />
+	<body class="bg-brand-black text-brand-white font-rubik overflow-x-hidden">
+		<div class="w-screen min-h-screen flex flex-col m-0 p-0 gap-y-4 relative">
+			<Header />
+			<slot />
+			<BackTop />
+		</div>
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>

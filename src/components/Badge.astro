@@ -1,0 +1,10 @@
+---
+interface Props{
+    link: string;
+}
+
+const { link } = Astro.props;
+---
+<a href={link} class="flex flex-row gap-x-2 bg-brand-gray hover:bg-brand-gray/60 rounded-full items-center justify-center w-fit px-4 py-2 text-base">
+    <slot />
+</a>

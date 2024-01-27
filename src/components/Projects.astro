@@ -1,0 +1,88 @@
+---
+import Container from "./Container.astro"
+import Section from "./Section.astro"
+import Tailwind from './icons/Tailwind.astro'
+import React from './icons/React.astro'
+import Next from './icons/Next.astro'
+import JavaScript from './icons/JavaScript.astro'
+import HTML from './icons/HTML.astro'
+import CSS from './icons/CSS.astro'
+import TypeScript from './icons/TypeScript.astro'
+
+const TAGS = {
+    NEXT: {
+        lang: "Next.js",
+        icon: Next,
+        class: "bg-brand-white text-black"
+    },
+    TAILWIND:{
+        lang: "Tailwind CSS",
+        icon: Tailwind,
+        class: "bg-[#003159] text-brand-white"
+    },
+    REACT:{
+        lang: "React",
+        icon: React,
+        class: "bg-[#003159] text-brand-white"
+    },
+    JAVASCRIPT:{
+        lang: "JavaScript",
+        icon: JavaScript,
+        class: "bg-brand-yellow/20 text-brand-white"
+    },
+    HTML:{
+        lang: "HTML",
+        icon: HTML,
+        class: "bg-orange-500/20 text-brand-white"
+    },
+    CSS:{
+        lang: "CSS",
+        icon: CSS,
+        class: "bg-[#003159] text-brand-white"
+    },
+    TYPESCRIPT:{
+        lang: "TypeScript",
+        icon: TypeScript,
+        class: "bg-[#003159] text-brand-white"
+    }
+}
+const PROJECTS = [
+    {
+        title: "Weather Mobile App",
+        github: 'https://github.com/CristhianTapiero/Weather_Mobile_App',
+        tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT,],
+        image: "",
+        description: "Aplicación del clima hecha con React Native y Expo, mediante la cual se evidencia el conocimiento en el uso de API's y el manejo de estados con fetch."
+    }
+]
+---
+<Container id="proyectos">
+    <Section classes="flex-col">
+        <h2 class="text-xl">Proyectos</h2>
+        <div class="grid w-5/6 h-5/6 grid-cols-5 grid-flow-row self-center my-4 gap-2 max-w-[900px] max-sm:grid-cols-3 max-sm:h-[95%]">
+            <div class="rounded-xl bg-[url('./Mobile_Scenario.jpg')] bg-center max-md:bg-[url('./Mobile_Scenario_Small.jpg')] bg-cover bg-no-repeat bg-clip-border col-start-1 col-end-4 row-start-1 row-end-3 max-sm:col-start-1 max-sm:col-end-4 max-sm:row-start-1 max-sm:row-end-3 max-md:row-end-4 max-lg:col-end-3 max-lg:row-end-2">
+                <a href="https://www.youtube.com" target="_blank" class="flex justify-center flex-col rounded-xl w-full h-full bg-brand-gray/70 px-2">
+                    <h2 class="text-2xl max-md:text-lg font-semibold">{PROJECTS[0].title}</h2>
+                    <div class="flex flex-row  flex-wrap mt-4 gap-2">
+                        {PROJECTS[0].tags.map(tag => (
+                            <div class={`flex flex-row justify-center items-center rounded-xl ${tag.class} gap-2 px-4 py-1.5 min-w-max`}>
+                                <tag.icon class="size-4" />
+                                <h3 class="text-xs">{tag.lang}</h3>
+                            </div>
+                        ))}
+                    </div>
+                    <p class="mt-8 text-balance max-sm:text-sm">{PROJECTS[0].description}</p>
+                </a>
+            </div>
+            <div class="flex justify-center items-center flex-col rounded-xl bg-brand-purple col-start-4 col-end-6 max-sm:col-start-1 max-sm:col-end-2 max-lg:col-start-3">
+                <h2>Other</h2>
+            </div>
+            <div class="flex justify-center items-center flex-col rounded-xl bg-brand-deep-purple col-start-4 col-end-5 max-sm:col-start-2 max-sm:col-end-3 max-md:col-start-3 max-md:col-end-6 max-lg:col-start-1 max-lg:col-end-4">
+                <h2>Other</h2>
+            </div>
+            <div class="flex justify-center items-center flex-col rounded-xl bg-brand-white text-black max-sm:col-start-3 max-sm:col-end-4 max-md:col-start-3 max-md:col-end-6 max-lg:col-start-4 max-lg:col-end-6">
+                <h2>Other</h2>
+            </div>
+        </div>
+    </Section>
+</Container>

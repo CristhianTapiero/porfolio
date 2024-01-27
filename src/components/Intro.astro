@@ -1,0 +1,58 @@
+---
+import Container from "./Container.astro"
+import Section from "./Section.astro"
+import Badge from "./Badge.astro"
+import { Icon } from 'astro-icon/components'
+---
+
+
+<Container id="inicio">
+    <Section classes="justify-center md:items-center gap-x-4 max-md:flex-col">
+        <article class="p-2">
+            <img
+                src="../profileC.webp"
+                alt="Cristhian Tapiero"
+                class="size-36 min-w-36 min-h-36 rounded-full"
+            />
+        </article>
+        <article>
+            <h1 class="text-4xl font-bold mb-4 tracking-tight max-w-[700px] text-balance">
+                Hola!👋 Soy Cristhian
+                <span class="text-brand-purple font-semibold inline-block">
+                    Tapiero
+                </span>.
+            </h1>
+            <div class="flex flex-row items-center gap-x-6 my-3">
+                <Badge link="">
+                    <Icon name='brandico:linkedin-rect' class='text-blue-700'/>
+                    <h2>Buscando empleo</h2>
+                </Badge>
+                <Badge link="">
+                    <Icon name='brandico:github' class='text-brand-white'/>
+                    <h2>GitHub</h2>
+                </Badge>
+            </div>
+            <h2 class="max-w-[55ch] text-balance">
+                Desarrollador Frontend de
+                <span class="text-brand-yellow font-semibold">
+                    Bogotá, Colombia
+                </span>
+                .
+                <span class="text-brand-purple font-semibold">
+                    +5 años
+                </span>
+                de aprendizaje autonomo y universitario.
+                <span class="text-brand-yellow font-semibold">
+                    Ingles B2+
+                </span>
+                y
+                <span class="text-brand-purple font-semibold">
+                    Español nativo
+                </span>. Actualmente estudiando
+                <span class="text-brand-yellow font-semibold">
+                    Ingeniería de Sistemas
+                </span>.
+            </h2>
+        </article>
+    </Section>
+</Container>

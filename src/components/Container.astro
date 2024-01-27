@@ -1,0 +1,10 @@
+---
+interface Props {
+    id: string
+}
+
+const { id } = Astro.props
+---
+<section id={id} class="w-[calc(100vw - 4rem)] h-screen flex justify-center items-center px-4">
+    <slot />
+</section>
