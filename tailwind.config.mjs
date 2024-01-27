@@ -14,6 +14,10 @@ export default {
 			},
 			fontFamily:{
 				'rubik': ['Rubik', 'sans-serif'],
+			},
+			backgroundImage:{
+				'Weather' : "url('./Mobile_Scenario.webp')",
+				'Weather-Mobile': "url('./Mobile_Scenario_Small.webp')",
 			}
 		},
 	},
