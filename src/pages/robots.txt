@@ -1,0 +1,9 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
+googleBot: crawl/true
+
+Sitemap: https://www.cristhian-tapiero.vercel.app/sitemap.xml
