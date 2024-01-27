@@ -57,11 +57,13 @@ const PROJECTS = [
 ]
 ---
 <Container id="proyectos">
-    <Section classes="flex-col">
+    <Section classes="flex-col gap-y-8">
         <h2 class="text-xl">Proyectos</h2>
-        <div class="grid w-5/6 h-5/6 grid-cols-5 grid-flow-row self-center my-4 gap-2 max-w-[900px] max-sm:grid-cols-3 max-sm:h-[95%]">
-            <div class="rounded-xl bg-Weather bg-center max-md:bg-Weather-Mobile bg-cover bg-no-repeat bg-clip-border col-start-1 col-end-4 row-start-1 row-end-3 max-sm:col-start-1 max-sm:col-end-4 max-sm:row-start-1 max-sm:row-end-3 max-md:row-end-4 max-lg:col-end-3 max-lg:row-end-2">
-                <a href="https://www.youtube.com" target="_blank" class="flex justify-center flex-col rounded-xl w-full h-full bg-brand-gray/70 px-2">
+        <div class="grid w-5/6 max-md:w-11/12 h-5/6 max-md:h-[90%] grid-cols-5 grid-flow-row self-center my-4 gap-2 max-w-[900px] max-sm:grid-cols-3 max-sm:h-[95%]">
+            <div class="group flex-nowrap relative rounded-xl col-start-1 col-end-4 overflow-hidden row-start-1 row-end-3 max-sm:col-start-1 max-sm:col-end-4 max-sm:row-start-1 max-sm:row-end-3 max-md:row-end-4 max-lg:col-end-3 max-lg:row-end-2">
+                <img src="/desktopScenario.webp" alt="Background" class="lg:hidden w-full h-full object-cover -z-10 absolute top-0 left-0 group-hover:scale-110 transition-all">
+                <img src="/mobileScenario.webp" alt="Background" class="max-md:hidden w-full h-full object-cover -z-10 absolute top-0 left-0 group-hover:scale-110 transition-all">
+                <a href="https://www.youtube.com" target="_blank" class="flex justify-center flex-col rounded-xl z-10 w-full h-full bg-brand-gray/80 px-2 overflow-hidden">
                     <h2 class="text-2xl max-md:text-lg font-semibold">{PROJECTS[0].title}</h2>
                     <div class="flex flex-row  flex-wrap mt-4 gap-2">
                         {PROJECTS[0].tags.map(tag => (
@@ -71,7 +73,7 @@ const PROJECTS = [
                             </div>
                         ))}
                     </div>
-                    <p class="mt-8 text-balance max-sm:text-sm">{PROJECTS[0].description}</p>
+                    <p class="mt-8 text-balance max-sm:text-sm text-ellipsis">{PROJECTS[0].description}</p>
                 </a>
             </div>
             <div class="flex justify-center items-center flex-col rounded-xl bg-brand-purple col-start-4 col-end-6 max-sm:col-start-1 max-sm:col-end-2 max-lg:col-start-3">
