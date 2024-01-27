@@ -18,6 +18,7 @@ export default defineConfig({
     locales: ['en', 'es'],
     defaultLocale: 'es'
   },
+  output: 'server',
   adapter: vercel({
     imageService: true,
   }),
