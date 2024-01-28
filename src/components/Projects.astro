@@ -1,13 +1,29 @@
 ---
 import Container from "./Container.astro"
 import Section from "./Section.astro"
-import Tailwind from './icons/Tailwind.astro'
-import React from './icons/React.astro'
-import Next from './icons/Next.astro'
-import JavaScript from './icons/JavaScript.astro'
-import HTML from './icons/HTML.astro'
-import CSS from './icons/CSS.astro'
-import TypeScript from './icons/TypeScript.astro'
+import TypeScript from "./icons/TypeScript.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import HTML from "./icons/HTML.astro";
+import CSS from "./icons/CSS.astro";
+import React from "./icons/React.astro";
+import Next from "./icons/Next.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import MYSQL from "./icons/MYSQL.astro";
+import Java from "./icons/Java.astro";
+import AWS from "./icons/AWS.astro";
+import Git from "./icons/Git.astro";
+import Chakra from "./icons/Chakra.astro";
+import Node from "./icons/Node.astro";
+import Firebase from "./icons/Firebase.astro";
+import Framer from "./icons/Framer.astro";
+import PlanetScale from "./icons/PlanetScale.astro";
+import Prisma from "./icons/Prisma.astro";
+import Svelte from "./icons/Svelte.astro";
+import Vue from "./icons/Vue.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import Python from "./icons/Python.astro";
+import Dart from "./icons/Dart.astro";
+import Flutter from "./icons/Flutter.astro";
 
 const TAGS = {
     NEXT: {
@@ -44,6 +60,86 @@ const TAGS = {
         lang: "TypeScript",
         icon: TypeScript,
         class: "bg-[#003159] text-brand-white"
+    },
+    MYSQL:{
+        lang: "MySQL",
+        icon: MYSQL,
+        class: "bg-brand-white text-black"
+    },
+    JAVA:{
+        lang: "Java",
+        icon: Java,
+        class: "bg-brand-white text-black"
+    },
+    AWS:{
+        lang: "AWS",
+        icon: AWS,
+        class: "bg-brand-white text-black"
+    },
+    GIT:{
+        lang: "Git",
+        icon: Git,
+        class: "bg-brand-white text-black"
+    },
+    CHAKRA:{
+        lang: "Chakra UI",
+        icon: Chakra,
+        class: "bg-brand-white text-black"
+    },
+    NODE:{
+        lang: "Node.js",
+        icon: Node,
+        class: "bg-brand-white text-black"
+    },
+    FIREBASE:{
+        lang: "Firebase",
+        icon: Firebase,
+        class: "bg-brand-white text-black"
+    },
+    FRAMER:{
+        lang: "Framer Motion",
+        icon: Framer,
+        class: "bg-brand-white text-black"
+    },
+    PLANETSCALE:{
+        lang: "PlanetScale",
+        icon: PlanetScale,
+        class: "bg-brand-white text-black"
+    },
+    PRISMA:{
+        lang: "Prisma",
+        icon: Prisma,
+        class: "bg-brand-white text-black"
+    },
+    SVELTE:{
+        lang: "Svelte",
+        icon: Svelte,
+        class: "bg-brand-white text-black"
+    },
+    VUE:{
+        lang: "Vue",
+        icon: Vue,
+        class: "bg-brand-white text-black"
+    },
+    ASTRO:{
+        lang: "Astro",
+        icon: AstroIcon,
+        class: "bg-brand-white text-black"
+    },
+    PYTHON:{
+        lang: "Python",
+        icon: Python,
+        class: "bg-brand-white text-black"
+    },
+    DART:{
+        lang: "Dart",
+        icon: Dart,
+        class: "bg-brand-white text-black"
+    },
+    FLUTTER:{
+        lang: "Flutter",
+        icon: Flutter,
+        class: "bg-brand-white text-black"
     }
 }
 const PROJECTS = [
@@ -61,8 +157,8 @@ const PROJECTS = [
         <h2 class="text-xl">Proyectos</h2>
         <div class="grid w-5/6 max-md:w-11/12 h-5/6 max-md:h-[90%] grid-cols-5 grid-flow-row self-center my-4 gap-2 max-w-[900px] max-sm:grid-cols-3 max-sm:h-[95%]">
             <div class="group flex-nowrap relative rounded-xl col-start-1 col-end-4 overflow-hidden row-start-1 row-end-3 max-sm:col-start-1 max-sm:col-end-4 max-sm:row-start-1 max-sm:row-end-3 max-md:row-end-4 max-lg:col-end-3 max-lg:row-end-2">
-                <img src="/desktopScenario.webp" alt="Background" class="lg:hidden w-full h-full object-cover -z-10 absolute top-0 left-0 group-hover:scale-110 transition-all">
-                <img src="/mobileScenario.webp" alt="Background" class="max-md:hidden w-full h-full object-cover -z-10 absolute top-0 left-0 group-hover:scale-110 transition-all">
+                <img src="/desktopWeather.webp" alt="Background" class="lg:hidden w-full h-full object-cover -z-10 absolute top-0 left-0 group-hover:scale-110 transition-all">
+                <img src="/mobileWeather.webp" alt="Background" class="max-md:hidden w-full h-full object-cover -z-10 absolute top-0 left-0 group-hover:scale-110 transition-all">
                 <a href="https://www.youtube.com" target="_blank" class="flex justify-center flex-col rounded-xl z-10 w-full h-full bg-brand-gray/80 px-2 overflow-hidden">
                     <h2 class="text-2xl max-md:text-lg font-semibold">{PROJECTS[0].title}</h2>
                     <div class="flex flex-row  flex-wrap mt-4 gap-2">

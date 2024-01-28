@@ -21,6 +21,9 @@ import Prisma from "./icons/Prisma.astro";
 import Svelte from "./icons/Svelte.astro";
 import Vue from "./icons/Vue.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
+import Python from "./icons/Python.astro";
+import Dart from "./icons/Dart.astro";
+import Flutter from "./icons/Flutter.astro";
 
 const TAGS = [
     {
@@ -121,6 +124,18 @@ const TAGS = [
         lang: "Astro",
         icon: AstroIcon,
         class: "bg-black text-brand-white"
+    },{
+        lang: "Python",
+        icon: Python,
+        class: "bg-[#003159] text-brand-white"
+    },{
+        lang: "Dart",
+        icon: Dart,
+        class: "bg-[#003159] text-brand-white"
+    },{
+        lang: "Flutter",
+        icon: Flutter,
+        class: "bg-[#003159] text-brand-white"
     }
 ]
 const Titles = [
@@ -133,33 +148,43 @@ const Titles = [
         title: "AWS Cloud Practitioner Certified",
         school: "Universidad de los Andes",
         date: "2021-2022"
+    },
+    {
+        title: "Fundamentos de la programación",
+        school: "Universidad de Pamplona",
+        date: "2020-2021"
+    },
+    {
+        title: "AWS Machine Learning Foundations",
+        school: "Amazon Web Services",
+        date: "2021"
     }
 ]
 ---
 
 <Container id="estudios">
     <Section classes="flex-col">
-        <h2 class="text-xl">Estudios</h2>
-        <article class="flex flex-col w-11/12 items-center justify-center gap-2 my-4">
+        <h2 class="text-xl max-sm:text-lg">Estudios</h2>
+        <article class="flex flex-wrap w-11/12 items-center gap-2 my-4 max-sm:my-2">
             {
                 Titles.map((title) =>
                     (
-                        <div class="w-full bg-brand-gray py-2 px-1 rounded-xl">
-                            <h3 class="text-lg text-brand-white">{title.title}</h3>
-                            <h4 class="text-md text-brand-white">{title.school}</h4>
-                            <h5 class="text-md text-brand-white">{title.date}</h5>
+                        <div class="max-md:w-full w-2/5 bg-brand-gray py-2 px-1 rounded-xl min-w-[30ch]">
+                            <h3 class="text-lg max-sm:text-base text-brand-yellow font-semibold">{title.title}</h3>
+                            <h4 class="text-base max-sm:text-sm text-brand-white">{title.school}</h4>
+                            <h5 class="text-sm max-sm:text-xs text-brand-purple max-sm:hidden">{title.date}</h5>
                         </div>
                     )
                 )
             }
         </article>
-        <h2 class="text-xl">Habilidades Tecnicas</h2>
-        <article class="flex flex-row flex-wrap w-2/4 items-center justify-center gap-2 my-4 self-center max-md:w-10/12">
+        <h2 class="text-xl max-sm:text-lg">Habilidades Tecnicas</h2>
+        <article class="flex flex-row flex-wrap w-2/4 items-center md:justify-center gap-2 md:my-4 my-2 self-center max-md:w-full">
             {
                 TAGS.map(tag =>(
                     <div class={`flex flex-row items-center justify-center gap-2 rounded-xl p-2 ${tag.class}`}>
                         <tag.icon class="size-7 max-md:size-4"/>
-                        <h3 class="text-lg max-md:text-sm">{tag.lang}</h3>
+                        <h3 class="text-base max-md:text-sm">{tag.lang}</h3>
                     </div>
                 ))
             }

@@ -1,0 +1,29 @@
+---
+import Instagram from '../components/social/Instagram.astro'
+import X from '../components/social/X.astro'
+
+const social = [
+    {
+        name: 'Instagram',
+        url: 'https://www.instagram.com/tapieropadilla/',
+        icon: Instagram
+    },
+    {
+        name: 'X',
+        url: 'https://twitter.com/tapiero_padilla',
+        icon: X
+    }
+]
+---
+
+<div class="absolute bottom-0 left-0 flex items-center justify-evenly h-10 w-full px-8 bg-brand-gray text-brand-white">
+    <p>&copy; Unico y detergente, gracias por llegar hasta aquí.</p>
+    <div class="flex gap-x-4">
+        {
+            social.map(item => (
+                    <a href={item.url} class="flex cursor-pointer "><item.icon class='size-4' /></a>
+                )
+            )
+        }
+    </div>
+</div>
