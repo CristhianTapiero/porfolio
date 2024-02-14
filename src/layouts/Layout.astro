@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import BackTop from "../components/BackTop.astro";
 import Footer from "../components/Footer.astro";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ViewTransitions } from 'astro:transitions';
 interface Props {
 	title: string;
@@ -23,7 +24,7 @@ const { title } = Astro.props;
 		/>
 		<meta
 			name="keywords"
-			content="Front-End developer, Web designer, JavaScript developer, Systems engineer, Web developer, Developer"
+			content="Front-End developer, Web designer, JavaScript developer, Systems engineer, Web developer, Developer, Web, Front, Desarrollador, Junior, Next, NextJS, Cris, Cristhian, Cristhian David, David, Cristhian Tapiero, Tapiero, Padilla, Tapiero Padilla, React, Java, JavaScript, HTML, CSS"
 		/>
 		<meta name="robots" content="index, follow" />
 		<meta name="application-name" content="Cristhian Tapiero" />
@@ -48,5 +49,6 @@ const { title } = Astro.props;
 			<BackTop />
 			<Footer />
 		</div>
+		<SpeedInsights />
 	</body>
 </html>
