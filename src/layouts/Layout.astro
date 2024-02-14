@@ -41,6 +41,7 @@ const { title } = Astro.props;
 		<link rel="shortcut icon" href="./martini.webp" type="image/x-icon" />
 		<title>{title}</title>
 		<ViewTransitions />
+		<SpeedInsights />
 	</head>
 	<body class="bg-brand-black text-brand-white font-rubik overflow-x-hidden">
 		<div class="w-screen min-h-screen flex flex-col m-0 p-0 gap-y-4 relative">
@@ -49,6 +50,5 @@ const { title } = Astro.props;
 			<BackTop />
 			<Footer />
 		</div>
-		<SpeedInsights />
 	</body>
 </html>
