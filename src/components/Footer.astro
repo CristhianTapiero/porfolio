@@ -1,17 +1,16 @@
 ---
-import Instagram from '../components/social/Instagram.astro'
-import X from '../components/social/X.astro'
+import { Icon } from "astro-icon/components"
 
 const social = [
     {
         name: 'Instagram',
         url: 'https://www.instagram.com/tapieropadilla/',
-        icon: Instagram
+        icon: "instagram"
     },
     {
         name: 'X',
         url: 'https://twitter.com/tapiero_padilla',
-        icon: X
+        icon: "x"
     }
 ]
 ---
@@ -21,7 +20,7 @@ const social = [
     <div class="flex gap-x-2">
         {
             social.map(item => (
-                    <a href={item.url} class="flex cursor-pointer "><item.icon class='size-4' /></a>
+                    <a href={item.url} class="flex cursor-pointer "><Icon name={`simple-icons:${item.icon}`} class='size-4' /></a>
                 )
             )
         }

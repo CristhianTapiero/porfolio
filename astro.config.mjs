@@ -10,11 +10,7 @@ export default defineConfig({
   site: 'https://www.cristhian-tapiero.vercel.app',
   integrations: [tailwind(), icon({
     include: {
-      mdi: ["*"],
-      "gravity-ui": ["*"],
-      humbleicons: ["*"],
-      brandico: ["*"],
-      "devicon-plain": ["*"]
+      "simple-icons": ["github", "linkedin", "x", "instagram"],
     }
   }), robotsTxt()],
   i18n: {
