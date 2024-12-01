@@ -11,16 +11,21 @@ const social = [
         name: 'X',
         url: 'https://twitter.com/tapiero_padilla',
         icon: "x"
+    },{
+        name: 'Linkedin',
+        url: 'https://www.linkedin.com/in/cristhian-tapiero-padilla/',
+        icon: "linkedin"
     }
 ]
 ---
 
-<div class="absolute bottom-0 left-0 flex items-center justify-evenly h-16 w-full px-4 py-2 bg-brand-gray text-brand-white">
-    <p class="text-base max-sm:text-xs">&copy; Unico y detergente, gracias por llegar hasta aquí.</p>
-    <div class="flex gap-x-2">
+<div class="absolute bottom-0 left-0 flex items-center justify-evenly h-16 w-full px-4 py-2 bg-personal-white text-personal-black border-t-personal-black border-2">
+    <p class="text-base max-sm:text-xs">&copy; Hecho por Cristhian David Tapiero Padilla</p>
+    <div class="flex gap-x-2 justify-center items-center">
+        Sigueme en:
         {
             social.map(item => (
-                    <a href={item.url} class="flex cursor-pointer "><Icon name={`simple-icons:${item.icon}`} class='size-4' /></a>
+                    <a href={item.url} class="flex cursor-pointer"><Icon name={`simple-icons:${item.icon}`} class='size-5' /></a>
                 )
             )
         }
