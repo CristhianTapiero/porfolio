@@ -1,0 +1,12 @@
+.personal-shadow{
+    box-shadow: -6px 6px;
+    transition: 0.3s;
+}
+.personal-shadow-sm{
+    box-shadow: 3px 3px;
+    transition: 0.3s;
+}
+.personal-shadow-large{
+    box-shadow: 10px 10px;
+    transition: 0.3s;
+}

@@ -1,0 +1,32 @@
+---
+import Container from "./Container.astro";
+import Section from "./Section.astro";
+
+const Jobs = [
+    {
+        title: "Experto de Mesa de Apoyo Pedagógico",
+        company: "MINTIC - Unión temporal Libret (Universidad Libre - Etraining)",
+        date: "Junio 2024 - Actualidad",
+        description: "En este proyecto apoyé el area pedagógica supliendo las necesidades de los estudiantes en cuanto a la comprensión de los temas y la resolución de dudas con respecto a los cursos de Inteligencia Artificial, Arquitectura en la Nube, Ciberseguridad, Programación y Análisis de Datos. Además de la creación de contenido para las clases y la realización de talleres entregables."
+    }
+]
+---
+
+<Container id="experiencia">
+    <Section classes="flex-col">
+        <h2>Experiencia Laboral</h2>
+        {
+            Jobs.map((job, index) => (
+                <article class="flex justify-center items-center gap-y-4 flex-col flex-grow">
+                    <div class="text-balance max-sm:text-sm max-w-4xl border-2 border-personal-black personal-shadow-large rounded-2xl px-5 py-4">
+                        <h2 class="text-xl font-semibold max-sm:text-lg mb-2">{job.title}</h2>
+                        <h3 class="text-sm">{job.company}</h3>
+                        <h3 class="text-sm">{job.date}</h3>
+                        <p>{job.description}</p>
+                    </div>
+                </article>
+            ))
+        }
+
+    </Section>
+</Container>
