@@ -13,6 +13,7 @@ import { Icon } from 'astro-icon/components'
                 src="../profileC.webp"
                 alt="Cristhian Tapiero"
                 class="size-44 max-sm:size-36 min-w-36 min-h-36 rounded-xl personal-shadow"
+                loading="lazy"
             />
         </article>
         <article>
@@ -20,11 +21,11 @@ import { Icon } from 'astro-icon/components'
                 Cristhian David Tapiero Padilla
             </h1>
             <div class="flex flex-row items-center gap-x-6 max-sm:gap-x-2 my-3">
-                <Badge link="https://www.linkedin.com/in/cristhian-tapiero/">
+                <Badge link="https://www.linkedin.com/in/cristhian-tapiero/" ariaLabel="Ir a mi LinkedIn">
                     <Icon name="simple-icons:linkedin" />
                     <h2>LinkedIn</h2>
                 </Badge>
-                <Badge link="https://github.com/CristhianTapiero">
+                <Badge link="https://github.com/CristhianTapiero" ariaLabel="Ir a mi perfil de GitHub">
                     <Icon name='simple-icons:github' class='text-personal-black'/>
                     <h2>GitHub</h2>
                 </Badge>

@@ -11,6 +11,7 @@ export default defineConfig({
   integrations: [tailwind(), icon({
     include: {
       "simple-icons": ["github", "linkedin", "x", "instagram"],
+      "humbleicons": ["arrow-go-back", "bars"]
     }
   }), robotsTxt()],
   i18n: {

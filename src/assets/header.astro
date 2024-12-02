@@ -1,12 +1,126 @@
-<nav class="flex justify-evenly w-full px-6 py-2 backdrop-blur-md fixed top-0 z-50 h-fit">
-    <a class="flex gap-x-2 items-center justify-center" href="#inicio">
-        <img src="./martini.webp" alt="Cristhian's Logo" class="size-10">
+---
+import { Icon } from "astro-icon/components"
+---
+<nav
+    class="flex justify-evenly max-sm:justify-between w-full px-6 py-2 backdrop-blur-md fixed top-0 z-50 h-fit"
+>
+    <a class="flex gap-x-2 items-center justify-center" href="#inicio" aria-label="Volver al inicio">
+        <img src="./martini.webp" alt="Cristhian's Logo" class="size-10" loading="lazy"/>
         <h1>Cristhian Tapiero</h1>
     </a>
-    <ul class="flex gap-x-4 h-10 items-center justify-center">
-        <li><a href="#experiencia" aria-label="experiencia" class="hover:underline">Experiencia</a></li>
-        <li><a href="#proyectos" aria-label="proyectos" class="hover:underline">Proyectos</a></li>
-        <li><a href="#estudios" aria-label="estudios" class="hover:underline">Habilidades</a></li>
-        <li><a href="#about" aria-label="sobre mí" class="hover:underline">Sobre mí</a></li>
+    <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-personal-black p-3" aria-label="Abrir menú lateral">
+            <Icon name={"humbleicons:bars"} class="size-7"/>
+        </button>
+    </div>
+    <ul class="hidden lg:flex gap-x-4 h-10 items-center justify-center">
+        <li>
+            <a
+                href="#experiencia"
+                aria-label="Ir a la sección de experiencia laboral"
+                class="hover:underline"
+                >Experiencia</a>
+        </li>
+        <li>
+            <a href="#proyectos" aria-label="Ir a la sección de mis proyectos" class="hover:underline"
+                >Proyectos</a>
+        </li>
+        <li>
+            <a href="#estudios" aria-label="Ir a la sección de mis estudios" class="hover:underline"
+                >Habilidades</a>
+        </li>
+        <li>
+            <a href="#about" aria-label="Ir a la sección que habla sobre mí" class="hover:underline"
+                >Sobre mí</a>
+        </li>
     </ul>
 </nav>
+<div class="navbar-menu fixed top-0 left-0 bg-personal-light-black/60 w-screen h-screen -translate-x-full transition-transform duration-200 z-[60]">
+    <div class="flex flex-col h-full w-4/5 max-w-lg bg-personal-white relative py-3">
+        <div class="flex w-full h-fit justify-between px-4 items-center mb-10 z-[80]">
+            <a class="navbar-close flex gap-x-2 items-center justify-center" href="#inicio">
+                <img src="./martini.webp" alt="Cristhian's Logo" class="size-10" loading="lazy"/>
+            </a>
+            <button class="navbar-close" aria-label="Cerrar menú lateral">
+                <Icon name="humbleicons:arrow-go-back" class="size-6"/>
+            </button>
+        </div>
+        <ul class="flex flex-col items-center">
+            <li class="w-full border-b-2 py-3 border-b-personal-black px-4 active:bg-personal-light-black/20">
+                <a
+                    href="#experiencia"
+                    aria-label="Ir a la sección de experiencia laboral"
+                    class="hover:underline size-full navbar-close"
+                    >Experiencia</a
+                >
+            </li>
+            <li class="w-full border-b-2 py-3 border-b-personal-black px-4 active:bg-personal-light-black/20">
+                <a
+                    href="#proyectos"
+                    aria-label="Ir a la sección de mis proyectos"
+                    class="hover:underline size-full navbar-close"
+                    >Proyectos</a
+                >
+            </li>
+            <li class="w-full border-b-2 py-3 border-b-personal-black px-4 active:bg-personal-light-black/20">
+                <a
+                    href="#estudios"
+                    aria-label="Ir a la sección de mis estudios"
+                    class="hover:underline size-full navbar-close"
+                    >Habilidades</a
+                >
+            </li>
+            <li class="w-full py-3 px-4 active:bg-personal-light-black/20">
+                <a
+                    href="#about"
+                    aria-label="Ir a la sección que habla sobre mí"
+                    class="hover:underline size-full navbar-close"
+                    >Sobre mí</a
+                >
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    // Burger menus
+    document.addEventListener('DOMContentLoaded', function() {
+        // open
+        const burger = document.querySelectorAll('.navbar-burger');
+        const menu = document.querySelectorAll('.navbar-menu');
+    
+        if (burger.length && menu.length) {
+            for (var i = 0; i < burger.length; i++) {
+                burger[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('translate-x-0');
+                        menu[j].classList.toggle('-translate-x-full');
+
+                    }
+                });
+            }
+        }
+    
+        // close
+        const close = document.querySelectorAll('.navbar-close');
+    
+        if (close.length) {
+            for (var i = 0; i < close.length; i++) {
+                close[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('translate-x-0');
+                        menu[j].classList.toggle('-translate-x-full');
+                    }
+                });
+            }
+        }
+        document.addEventListener('click', function(event) {
+            if (event.target === document.querySelector('.navbar-menu')) {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('translate-x-0');
+                    menu[j].classList.toggle('-translate-x-full');
+                }
+            }
+        });
+    });
+    </script>
