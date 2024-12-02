@@ -48,26 +48,8 @@ const TAGS = [
         icon: "Git",
     },
     {
-        lang: "Chakra UI",
-        icon: "Chakra",
-    },
-    {
         lang: "Node.js",
         icon: "Node",
-    },
-    {
-        lang: "Firebase",
-        icon: "Firebase",
-    },
-    {
-        lang: "Framer Motion",
-        icon: "Framer",
-        class: "bg-black text-brand-white"
-    },
-    {
-        lang: "PlanetScale",
-        icon: "PlanetScale",
-        class: "bg-black text-brand-white"
     },
     {
         lang: "Prisma",
@@ -79,22 +61,14 @@ const TAGS = [
         icon: "Svelte",
     },
     {
-        lang: "Vue",
-        icon: "Vue",
-    },{
         lang: "Astro",
         icon: "AstroIcon",
         class: "bg-black text-brand-white"
-    },{
+    },
+    {
         lang: "Python",
         icon: "Python",
-    },{
-        lang: "Dart",
-        icon: "Dart",
-    },{
-        lang: "Flutter",
-        icon: "Flutter",
-    }
+    },
 ]
 const Titles = [
     {
@@ -142,7 +116,7 @@ const Titles = [
                 Object.values(TAGS).map((tag: { class?: string, icon: any, lang: string }) =>(
                     <div class={`flex flex-row items-center justify-center gap-2 rounded-xl p-2 text-black border-personal-black border-2 ${tag.class}`}>
                         <Icon name={tag.icon} class="size-7 max-md:size-4"/>
-                        <h3 class="text-base max-md:text-sm">{tag.lang}</h3>
+                        <h3 class="text-base max-md:text-xs">{tag.lang}</h3>
                     </div>
                 ))
             }
